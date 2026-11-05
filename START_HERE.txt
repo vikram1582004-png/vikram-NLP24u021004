@@ -1,0 +1,60 @@
+FAIRNESS-AWARE LLM RECOMMENDATION SYSTEM — FINAL MINOR PROJECT
+===============================================================
+
+This package contains:
+- Working Streamlit prototype
+- Fairness-aware recommender code
+- Optional OpenAI LLM integration + offline fallback
+- Synthetic dataset + 12 test profiles
+- Reproducible benchmark results
+- Final PowerPoint presentation
+- Academic project report
+- Viva questions and presentation notes
+
+WINDOWS QUICK START
+-------------------
+1. Install Python 3.10 or newer.
+2. Open Command Prompt in this folder.
+3. Run:
+   py -m venv venv
+   venv\Scripts\activate
+   pip install -r requirements.txt
+4. Optional LLM mode:
+   copy .env.example .env
+   Edit .env and set OPENAI_API_KEY.
+   The default model in the example is gpt-5.6-luna.
+5. Start prototype:
+   streamlit run app.py
+6. Benchmark:
+   python evaluate.py
+
+EASIEST METHOD
+--------------
+Double-click run_demo.bat. It creates the virtual environment, installs the dependencies,
+and starts Streamlit.
+
+DEMO QUERY
+----------
+I know Python and C++. I am interested in AI and software development, and I prefer remote internships.
+
+PRESENTATION
+------------
+Open:
+presentation\Fairness_Aware_LLM_Recommendation.pptx
+
+The presentation is 13 slides and covers motivation, problem statement, architecture,
+dataset, scoring, fairness metrics, prototype, results, implementation, limitations,
+conclusion, and references.
+
+RESULTS USED IN THE SLIDES (MEANS ACROSS 12 SYNTHETIC PROFILES)
+----------------------------------------------------------------
+Exposure Parity Gap: 0.4526 -> 0.2583 (42.9% lower)
+Exposure KL Divergence: 0.2941 -> 0.0617 (79.0% lower)
+Dashboard Fairness Score: 0.4725 -> 0.6439 (36.3% higher)
+Mean Relevance: 0.3573 -> 0.3793 (6.2% higher)
+
+IMPORTANT ACADEMIC NOTE
+-----------------------
+The data are synthetic. These results demonstrate the behavior of the prototype under a
+controlled benchmark and are not claims about real hiring performance. Provider-size exposure
+is a project-specific fairness criterion, not a universal definition of fairness.
